@@ -17,7 +17,7 @@ mouseScroll = []
 
 def some_job():
     global pressedKeys, mousex, mousey
-    print(str(pressedKeys))
+    return str(pressedKeys)
 
 
 def on_press(key):

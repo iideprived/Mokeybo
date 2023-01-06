@@ -1,7 +1,6 @@
 import socket
 import json
 import pyautogui
-import keyboard
 
 port = 1234
 socket_queue = 5
@@ -16,6 +15,6 @@ client_socket, address = ipv4.accept()
 print(f"Connection from {address} has been established!")
 
 while True:
-    mouse_x = pyautogui.position().x
-    mouse_y = pyautogui.position().y
-    client_socket.send(bytes(f"", encoding))
+    mouse_x = pyautogui.position().x / float(3840)
+    mouse_y = pyautogui.position().y / float(2180)
+    client_socket.send(bytes(f"{[mouse_x, mouse_y]}", encoding))
